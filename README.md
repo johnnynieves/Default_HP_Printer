@@ -7,3 +7,5 @@ ISSUES
 ______
 
 The program runs however it will stop halfway down the file importing and quit. Attached is the output it is named output.
+
+I am open to doing this a different programatic way if possible. Maybe rest api to modify the config sets in the browser.
