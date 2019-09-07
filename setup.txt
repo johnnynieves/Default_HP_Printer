@@ -1,0 +1,108 @@
+#__________HP LASERJET TELNET CONFIGURATION________
+#Product Name        :  HP LaserJet MFP M426fdw
+#Formatter Number    :  1M98RW5
+#Serial Number       :  PHBLL7C70P
+#Firmware Datecode   :  20180201
+ 
+
+#__________GENERAL_________________________________
+passwd                
+sys-location           Johnny's Office
+sys-contact            
+ssl-state              0
+security-reset         0
+
+#__________WIRELESS 802.11 MAIN____________________
+network-type           INFRASTRUCTURE
+desired-ssid           Nieves 2
+auth-type              SHARED_KEY
+server-auth            NONE
+svr-auth-user          HPMFP
+svr-auth-pass         Not Specified
+svr-auth-id            
+psk-passphrase        Specified
+encryption             0
+wep-key-method         ASCII
+wep-key               Not Specified
+transmit-key          Not Specified
+dynamic-encrypt        WPA2 
+dot1x                  0
+
+#__________TCP/IP MAIN_____________________________
+host-name              HPMFP
+ip-config              DHCP
+firewall-config        0
+ip                     10.0.0.109
+subnet-mask            255.255.255.0
+default-gw             10.0.0.1
+config-server         10.0.0.1
+tftp-server           0.0.0.0
+tftp-filename         
+domain-name            hsd1.ca.comcast.net
+pri-dns-svr            10.0.0.1
+sec-dns-svr            0.0.0.0
+pri-wins-svr           0.0.0.0
+reconfig               0
+
+#__________TCP/IP PRINT OPTIONS____________________
+9100-printing          1
+ftp-printing           0
+ws-printing            1
+ws-scanning            1
+ipp/ipps-printing      1
+lpd-printing           1
+banner                 1
+
+#__________TCP/IP ACCESS CONTROL___________________
+allow                  
+acl-config             0
+acl-http               1
+
+#__________TCP/IP OTHER____________________________
+syslog-config          1
+syslog-svr             0.0.0.0
+syslog-max             10
+syslog-priority        7
+syslog-protocol        1
+syslog-port            514
+syslog-facility        6
+slp-config             1
+bonjour-config         1
+bonjour-svc-name       HP LaserJet MFP M426fdw (B1367D)
+bonjour-domain-name   HPMFP.local.
+bonjour-services       0
+llmnr                  1
+ftp-download           0
+bootp-config           1
+dhcp-config            1
+autoip-config          1
+user-timeout           900
+cold-reset-all         0
+cold-reset-network     0
+ews-config             1
+dhcp-fqdn-conf         1
+airprint               1
+
+#__________SNMP____________________________________
+snmp-config            0
+get-cmnty-name        
+set-cmnty-name        
+default-get-cmnty      1
+auth-trap              0
+trap-dest              
+
+#__________OTHER___________________________________
+link-type              AUTO
+network-select        2
+job-timeout            240
+ws-discovery-conf      1
+
+#__________SUPPORT_________________________________
+support-contact        
+support-number         
+support-url            
+tech-support-url
+quit
+Y
+      
+
