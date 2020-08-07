@@ -16,3 +16,4 @@ with Telnet(host=HOST) as tn:
         tn.write(line.encode('ascii'))
     print(tn.read_all().decode('ascii'))
 
+ 
