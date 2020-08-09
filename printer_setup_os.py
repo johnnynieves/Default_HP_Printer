@@ -1,11 +1,13 @@
-#! /usr/bin/env python3.7
+#! /usr/bin/env python3
 from telnetlib import Telnet
-import os
+import sys
 from pprint import pprint
 import json
 
-# print(os.system('ping 10.0.0.1'))
-host = "164.248.27.80"
+support = "support-contact testingAgain"
+xit = "exit"
+reply = "Y"
+host = "10.0.107.22"
 with open('printer_configs.json', 'r') as f:
     data = json.load(f)
 print('I have the config file.\n')
@@ -13,18 +15,20 @@ print('I have the config file.\n')
 
 print(f'Attempting to connect {host}... \n')
 tn = Telnet(host=host, port=23, timeout=5)
-tn.read_until(b"> ", timeout=10)
-
-# os.system(f'telnet {host}')
+print(tn.read_until(b'\r\nType "help or ?" for information.\r\n>', timeout=10))
 print(f"Connected to {host} \n")
-print('Getting current configs \n')
-tn.write(b"support-contact mytest \r\n")
-tn.write(b"save \r\n")
-for i in data:
-    tn.write({data[i]} {i}").encode("ascii") + b"\r\n"
+tn.write(support.encode('ascii') + b"\r\n")
+tn.write(xit.encode('ascii') + b"\r\n")
+tn.write(reply.encode('ascii') + b"\r\n")
 
-tn.write(b"save \r\n")
-print('EOF')
+
+# for i in data:
+#     tn.write({data[i]} {i}").encode("ascii") + b"\r\n"
+
+output = tn.read_very_eager()
+print(output)
+tn.close()
+print('Done')
 # os.system('/ \n')
 # os.system('support-contact test')
 # os.system('exit')
